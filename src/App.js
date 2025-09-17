@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './componants/Navbar';
+import Footer from './componants/footer';
 
-function App() {
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import Quiz from './pages/Quiz';
+import Compiler from './pages/Compiler';
+import Room from './pages/Room';
+import Profile from './pages/profile';
+import QuizRoom from './pages/QuizRoom';
+import Leaderboard from './pages/Leaderboard';
+
+import Signup from './Signup';
+import Login from './Login';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/compiler" element={<Compiler />} />
+        <Route path="/room" element={<Room />} />
+        <Route path="/quizroom/:roomCode" element={<QuizRoom />} />
+        <Route path="/leaderboard/:roomCode" element={<Leaderboard />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;

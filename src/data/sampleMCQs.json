@@ -1,0 +1,428 @@
+{
+  "dataStructures": [
+    {
+      "id": "ds_1",
+      "question": "What is the time complexity of accessing an element in an array by index?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+      "correctAnswer": 0,
+      "explanation": "Array access by index is O(1) because it directly computes the memory location."
+    },
+    {
+      "id": "ds_2",
+      "question": "Which data structure follows Last In First Out (LIFO) principle?",
+      "options": ["Queue", "Stack", "Array", "Linked List"],
+      "correctAnswer": 1,
+      "explanation": "Stack follows LIFO principle - the last element added is the first one to be removed."
+    },
+    {
+      "id": "ds_3",
+      "question": "What is the maximum number of children a binary tree node can have?",
+      "options": ["1", "2", "3", "unlimited"],
+      "correctAnswer": 1,
+      "explanation": "A binary tree node can have at most 2 children by definition."
+    },
+    {
+      "id": "ds_4",
+      "question": "Which of the following is NOT a linear data structure?",
+      "options": ["Array", "Linked List", "Stack", "Tree"],
+      "correctAnswer": 3,
+      "explanation": "Tree is a non-linear data structure, while Array, Linked List, and Stack are linear."
+    },
+    {
+      "id": "ds_5",
+      "question": "What does FIFO stand for in data structures?",
+      "options": ["First In First Out", "Fast Input Fast Output", "File Input File Output", "First Input First Output"],
+      "correctAnswer": 0,
+      "explanation": "FIFO stands for First In First Out, which is the principle followed by queues."
+    },
+    {
+      "id": "ds_6",
+      "question": "What is the worst-case time complexity of quicksort?",
+      "options": ["O(n)", "O(n log n)", "O(n²)", "O(log n)"],
+      "correctAnswer": 2,
+      "explanation": "Quicksort has O(n²) worst-case time complexity when the pivot is chosen poorly."
+    },
+    {
+      "id": "ds_7",
+      "question": "In a binary search tree, which traversal gives elements in sorted order?",
+      "options": ["Pre-order", "In-order", "Post-order", "Level-order"],
+      "correctAnswer": 1,
+      "explanation": "In-order traversal of a BST gives elements in sorted (ascending) order."
+    },
+    {
+      "id": "ds_8",
+      "question": "What is the space complexity of a linked list with n elements?",
+      "options": ["O(1)", "O(n)", "O(n²)", "O(log n)"],
+      "correctAnswer": 1,
+      "explanation": "A linked list requires O(n) space to store n elements."
+    },
+    {
+      "id": "ds_9",
+      "question": "Which data structure is used for implementing recursion?",
+      "options": ["Queue", "Stack", "Array", "Tree"],
+      "correctAnswer": 1,
+      "explanation": "Stack is used to implement recursion as it stores function call information."
+    },
+    {
+      "id": "ds_10",
+      "question": "What is the height of a balanced binary tree with n nodes?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+      "correctAnswer": 2,
+      "explanation": "The height of a balanced binary tree is O(log n)."
+    },
+    {
+      "id": "ds_11",
+      "question": "What is the amortized time complexity of inserting an element into a dynamic array?",
+      "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+      "correctAnswer": 0,
+      "explanation": "Dynamic arrays have amortized O(1) time complexity for insertions due to occasional resizing."
+    },
+    {
+      "id": "ds_12",
+      "question": "In a red-black tree, what is the maximum height of a tree with n nodes?",
+      "options": ["O(log n)", "O(n)", "2 log(n+1)", "O(n²)"],
+      "correctAnswer": 2,
+      "explanation": "Red-black trees have a maximum height of 2 log(n+1)."
+    },
+    {
+      "id": "ds_13",
+      "question": "What is the time complexity of finding the median in a max-heap?",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+      "correctAnswer": 2,
+      "explanation": "Finding median in a heap requires O(n) time as we need to access all elements."
+    },
+    {
+      "id": "ds_14",
+      "question": "Which of the following data structures uses hashing?",
+      "options": ["Stack", "Queue", "Hash Table", "Tree"],
+      "correctAnswer": 2,
+      "explanation": "Hash tables use hashing to map keys to values for efficient lookups."
+    },
+    {
+      "id": "ds_15",
+      "question": "What is the best case time complexity of bubble sort?",
+      "options": ["O(1)", "O(n)", "O(n log n)", "O(n²)"],
+      "correctAnswer": 1,
+      "explanation": "Bubble sort has O(n) best case time complexity when the array is already sorted."
+    },
+    {
+      "id": "ds_16",
+      "question": "Which data structure is used in breadth-first search?",
+      "options": ["Stack", "Queue", "Priority Queue", "Hash Table"],
+      "correctAnswer": 1,
+      "explanation": "BFS uses a queue to keep track of nodes to visit next."
+    },
+    {
+      "id": "ds_17",
+      "question": "What is the space complexity of a graph represented using adjacency matrix?",
+      "options": ["O(V)", "O(E)", "O(V + E)", "O(V²)"],
+      "correctAnswer": 3,
+      "explanation": "Adjacency matrix representation uses O(V²) space where V is the number of vertices."
+    },
+    {
+      "id": "ds_18",
+      "question": "Which sorting algorithm is stable?",
+      "options": ["Quick Sort", "Heap Sort", "Merge Sort", "Selection Sort"],
+      "correctAnswer": 2,
+      "explanation": "Merge sort is a stable sorting algorithm that maintains the relative order of equal elements."
+    },
+    {
+      "id": "ds_19",
+      "question": "What is the purpose of a sentinel node in linked lists?",
+      "options": ["To store data", "To simplify boundary conditions", "To increase space", "To decrease time complexity"],
+      "correctAnswer": 1,
+      "explanation": "Sentinel nodes simplify boundary conditions by eliminating special cases for empty lists or end of list."
+    },
+    {
+      "id": "ds_20",
+      "question": "Which data structure is used for implementing LRU cache?",
+      "options": ["Stack", "Queue", "Hash Map + Doubly Linked List", "Binary Tree"],
+      "correctAnswer": 2,
+      "explanation": "LRU cache is typically implemented using a combination of Hash Map for O(1) access and Doubly Linked List for O(1) updates."
+    }
+  ],
+  "networking": [
+    {
+      "id": "net_1",
+      "question": "What does TCP stand for?",
+      "options": ["Transmission Control Protocol", "Transfer Control Protocol", "Transport Communication Protocol", "Terminal Control Protocol"],
+      "correctAnswer": 0,
+      "explanation": "TCP stands for Transmission Control Protocol, a connection-oriented protocol."
+    },
+    {
+      "id": "net_2",
+      "question": "Which layer of the OSI model is responsible for routing?",
+      "options": ["Physical", "Data Link", "Network", "Transport"],
+      "correctAnswer": 2,
+      "explanation": "The Network layer (Layer 3) is responsible for routing packets from source to destination."
+    },
+    {
+      "id": "net_3",
+      "question": "What is the purpose of ARP in networking?",
+      "options": ["Address Resolution Protocol - maps IP to MAC", "Application Routing Protocol", "Advanced Routing Protocol", "Address Routing Protocol"],
+      "correctAnswer": 0,
+      "explanation": "ARP (Address Resolution Protocol) maps IP addresses to MAC addresses in a local network."
+    },
+    {
+      "id": "net_4",
+      "question": "Which protocol is used for email transmission?",
+      "options": ["HTTP", "FTP", "SMTP", "DHCP"],
+      "correctAnswer": 2,
+      "explanation": "SMTP (Simple Mail Transfer Protocol) is used for sending emails."
+    },
+    {
+      "id": "net_5",
+      "question": "What is the default port number for HTTP?",
+      "options": ["21", "22", "80", "443"],
+      "correctAnswer": 2,
+      "explanation": "HTTP uses port 80 by default for web traffic."
+    },
+    {
+      "id": "net_6",
+      "question": "Which device operates at the Data Link layer of the OSI model?",
+      "options": ["Router", "Switch", "Hub", "Modem"],
+      "correctAnswer": 1,
+      "explanation": "Switches operate at the Data Link layer and use MAC addresses for forwarding."
+    },
+    {
+      "id": "net_7",
+      "question": "What does DNS stand for?",
+      "options": ["Domain Name System", "Dynamic Network Service", "Data Network Server", "Domain Network Service"],
+      "correctAnswer": 0,
+      "explanation": "DNS (Domain Name System) translates domain names to IP addresses."
+    },
+    {
+      "id": "net_8",
+      "question": "Which protocol provides secure communication over the internet?",
+      "options": ["HTTP", "FTP", "HTTPS", "Telnet"],
+      "correctAnswer": 2,
+      "explanation": "HTTPS (HTTP Secure) uses SSL/TLS encryption for secure communication."
+    },
+    {
+      "id": "net_9",
+      "question": "What is the maximum data rate of Ethernet?",
+      "options": ["10 Mbps", "100 Mbps", "1 Gbps", "10 Gbps"],
+      "correctAnswer": 3,
+      "explanation": "Modern Ethernet can support up to 10 Gbps and higher speeds."
+    },
+    {
+      "id": "net_10",
+      "question": "Which IP address class is used for multicasting?",
+      "options": ["Class A", "Class B", "Class C", "Class D"],
+      "correctAnswer": 3,
+      "explanation": "Class D IP addresses (224.0.0.0 to 239.255.255.255) are reserved for multicasting."
+    },
+    {
+      "id": "net_11",
+      "question": "What is the purpose of subnetting?",
+      "options": ["To increase network speed", "To divide a large network into smaller subnets", "To connect different networks", "To encrypt data"],
+      "correctAnswer": 1,
+      "explanation": "Subnetting divides a large network into smaller, more manageable subnets."
+    },
+    {
+      "id": "net_12",
+      "question": "Which protocol is used for file transfer?",
+      "options": ["HTTP", "SMTP", "FTP", "DHCP"],
+      "correctAnswer": 2,
+      "explanation": "FTP (File Transfer Protocol) is used for transferring files between computers."
+    },
+    {
+      "id": "net_13",
+      "question": "What is the size of an IPv4 address?",
+      "options": ["16 bits", "32 bits", "64 bits", "128 bits"],
+      "correctAnswer": 1,
+      "explanation": "IPv4 addresses are 32 bits long, providing about 4.3 billion unique addresses."
+    },
+    {
+      "id": "net_14",
+      "question": "Which device forwards data packets between different networks?",
+      "options": ["Switch", "Hub", "Router", "Bridge"],
+      "correctAnswer": 2,
+      "explanation": "Routers forward data packets between different networks based on IP addresses."
+    },
+    {
+      "id": "net_15",
+      "question": "What does NAT stand for?",
+      "options": ["Network Address Translation", "Network Access Terminal", "New Address Type", "Network Authentication Token"],
+      "correctAnswer": 0,
+      "explanation": "NAT (Network Address Translation) translates private IP addresses to public IP addresses."
+    },
+    {
+      "id": "net_16",
+      "question": "Which protocol is used for remote login?",
+      "options": ["HTTP", "FTP", "Telnet", "SMTP"],
+      "correctAnswer": 2,
+      "explanation": "Telnet is used for remote terminal connections and command execution."
+    },
+    {
+      "id": "net_17",
+      "question": "What is the purpose of a firewall?",
+      "options": ["To speed up network", "To monitor network traffic", "To block unauthorized access", "To route packets"],
+      "correctAnswer": 2,
+      "explanation": "Firewalls block unauthorized access and protect networks from security threats."
+    },
+    {
+      "id": "net_18",
+      "question": "Which wireless standard provides the fastest speed?",
+      "options": ["802.11b", "802.11g", "802.11n", "802.11ac"],
+      "correctAnswer": 3,
+      "explanation": "802.11ac (Wi-Fi 5) provides faster speeds compared to earlier standards."
+    },
+    {
+      "id": "net_19",
+      "question": "What is the purpose of DHCP?",
+      "options": ["To assign IP addresses automatically", "To resolve domain names", "To route packets", "To encrypt data"],
+      "correctAnswer": 0,
+      "explanation": "DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses to devices."
+    },
+    {
+      "id": "net_20",
+      "question": "Which protocol is connection-oriented?",
+      "options": ["UDP", "IP", "TCP", "Ethernet"],
+      "correctAnswer": 2,
+      "explanation": "TCP is a connection-oriented protocol that establishes a connection before data transfer."
+    }
+  ],
+  "operatingSystems": [
+    {
+      "id": "os_1",
+      "question": "What is the main function of an operating system?",
+      "options": ["Run applications", "Manage hardware resources", "Store data", "Connect to internet"],
+      "correctAnswer": 1,
+      "explanation": "The main function of an OS is to manage hardware resources and provide services to applications."
+    },
+    {
+      "id": "os_2",
+      "question": "Which scheduling algorithm can lead to starvation?",
+      "options": ["Round Robin", "FCFS", "Priority Scheduling", "SJF"],
+      "correctAnswer": 2,
+      "explanation": "Priority scheduling can lead to starvation if high priority processes keep arriving."
+    },
+    {
+      "id": "os_3",
+      "question": "What is thrashing in operating systems?",
+      "options": ["High CPU utilization", "Excessive paging causing performance degradation", "Memory leak", "Deadlock"],
+      "correctAnswer": 1,
+      "explanation": "Thrashing occurs when excessive paging causes the system to spend more time swapping than executing."
+    },
+    {
+      "id": "os_4",
+      "question": "Which of the following is NOT a process state?",
+      "options": ["Ready", "Running", "Waiting", "Terminated"],
+      "correctAnswer": 3,
+      "explanation": "Terminated is not a standard process state. The main states are New, Ready, Running, Waiting, and Terminated."
+    },
+    {
+      "id": "os_5",
+      "question": "What is virtual memory?",
+      "options": ["Physical RAM", "Secondary storage used as RAM", "Cache memory", "ROM"],
+      "correctAnswer": 1,
+      "explanation": "Virtual memory uses secondary storage (hard disk) to extend physical RAM capacity."
+    },
+    {
+      "id": "os_6",
+      "question": "Which algorithm is used for deadlock avoidance?",
+      "options": ["Banker's Algorithm", "Round Robin", "FCFS", "SJF"],
+      "correctAnswer": 0,
+      "explanation": "Banker's Algorithm is used for deadlock avoidance by checking resource allocation safety."
+    },
+    {
+      "id": "os_7",
+      "question": "What is a semaphore used for?",
+      "options": ["Memory management", "Process synchronization", "File system", "Device drivers"],
+      "correctAnswer": 1,
+      "explanation": "Semaphores are used for process synchronization and preventing race conditions."
+    },
+    {
+      "id": "os_8",
+      "question": "Which scheduling algorithm is preemptive?",
+      "options": ["FCFS", "SJF", "Round Robin", "Priority (non-preemptive)"],
+      "correctAnswer": 2,
+      "explanation": "Round Robin is a preemptive scheduling algorithm that uses time quantum."
+    },
+    {
+      "id": "os_9",
+      "question": "What is the purpose of the kernel?",
+      "options": ["Run user applications", "Core part that manages system resources", "Handle user interface", "Manage files"],
+      "correctAnswer": 1,
+      "explanation": "The kernel is the core part of the OS that manages system resources and hardware."
+    },
+    {
+      "id": "os_10",
+      "question": "Which of the following is NOT a type of operating system?",
+      "options": ["Batch OS", "Time-sharing OS", "Real-time OS", "Virtual OS"],
+      "correctAnswer": 3,
+      "explanation": "Virtual OS is not a standard type. The main types are Batch, Time-sharing, Real-time, and Distributed."
+    },
+    {
+      "id": "os_11",
+      "question": "What is a critical section?",
+      "options": ["Part of code that must be executed atomically", "Section with high security", "Part of kernel", "Memory section"],
+      "correctAnswer": 0,
+      "explanation": "Critical section is a part of code that must be executed atomically to avoid race conditions."
+    },
+    {
+      "id": "os_12",
+      "question": "Which memory management technique uses paging?",
+      "options": ["Contiguous allocation", "Non-contiguous allocation", "Both A and B", "None of the above"],
+      "correctAnswer": 1,
+      "explanation": "Paging is a non-contiguous memory allocation technique that divides memory into fixed-size pages."
+    },
+    {
+      "id": "os_13",
+      "question": "What is the purpose of the page table?",
+      "options": ["Store process data", "Map virtual addresses to physical addresses", "Store file data", "Manage CPU scheduling"],
+      "correctAnswer": 1,
+      "explanation": "Page table maps virtual memory addresses to physical memory addresses."
+    },
+    {
+      "id": "os_14",
+      "question": "Which of the following can cause a deadlock?",
+      "options": ["Mutual exclusion", "Hold and wait", "No preemption", "All of the above"],
+      "correctAnswer": 3,
+      "explanation": "Deadlock requires four conditions: mutual exclusion, hold and wait, no preemption, and circular wait."
+    },
+    {
+      "id": "os_15",
+      "question": "What is the difference between multiprogramming and multiprocessing?",
+      "options": ["Same thing", "Multiprogramming uses multiple CPUs, multiprocessing uses single CPU", "Multiprogramming uses single CPU, multiprocessing uses multiple CPUs", "Both use single CPU"],
+      "correctAnswer": 2,
+      "explanation": "Multiprogramming runs multiple programs on a single CPU, while multiprocessing uses multiple CPUs."
+    },
+    {
+      "id": "os_16",
+      "question": "Which file system is used in Windows?",
+      "options": ["ext4", "NTFS", "FAT32", "HFS"],
+      "correctAnswer": 1,
+      "explanation": "NTFS (New Technology File System) is the primary file system used in Windows."
+    },
+    {
+      "id": "os_17",
+      "question": "What is the purpose of the swap space?",
+      "options": ["Store temporary files", "Extend virtual memory", "Store system logs", "Cache frequently used data"],
+      "correctAnswer": 1,
+      "explanation": "Swap space (swap file/page file) is used to extend virtual memory capacity."
+    },
+    {
+      "id": "os_18",
+      "question": "Which scheduling algorithm gives the minimum average waiting time?",
+      "options": ["FCFS", "SJF", "Round Robin", "Priority"],
+      "correctAnswer": 1,
+      "explanation": "SJF (Shortest Job First) gives the minimum average waiting time for processes."
+    },
+    {
+      "id": "os_19",
+      "question": "What is the purpose of the system call?",
+      "options": ["Call user functions", "Request OS services", "Manage memory", "Handle interrupts"],
+      "correctAnswer": 1,
+      "explanation": "System calls allow user programs to request services from the operating system."
+    },
+    {
+      "id": "os_20",
+      "question": "Which of the following is a volatile memory?",
+      "options": ["Hard disk", "SSD", "RAM", "ROM"],
+      "correctAnswer": 2,
+      "explanation": "RAM (Random Access Memory) is volatile memory that loses data when power is turned off."
+    }
+  ]
+}
