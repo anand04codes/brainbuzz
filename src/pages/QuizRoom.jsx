@@ -28,6 +28,8 @@ const QuizRoom = () => {
   const [userReady, setUserReady] = useState(false);
   const [timer, setTimer] = useState(0);
   const [quizStarted, setQuizStarted] = useState(false);
+  const [isCorrectAnswer, setIsCorrectAnswer] = useState(null);
+  const [answerSubmitted, setAnswerSubmitted] = useState(false);
 
   // Fetch room data and listen for real-time updates
   useEffect(() => {
@@ -106,6 +108,8 @@ const QuizRoom = () => {
 
   const handleAnswerSelect = async (answerIndex) => {
     setSelectedAnswer(answerIndex);
+    setIsCorrectAnswer(answerIndex === roomData.questions[currentQuestionIndex].correctAnswer);
+    setAnswerSubmitted(true);
   };
 
   const handleNext = async () => {
@@ -130,6 +134,8 @@ const QuizRoom = () => {
     if (currentQuestionIndex < roomData.questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer(null);
+      setAnswerSubmitted(false);
+      setIsCorrectAnswer(null);
       setTimer(30);
     } else {
       setQuizCompleted(true);
@@ -156,17 +162,20 @@ const QuizRoom = () => {
   }
 
   if (quizCompleted) {
+    const userId = localStorage.getItem('userId');
+    const userParticipant = participants.find(p => p.id === userId);
+    const userScore = userParticipant ? userParticipant.score : 0;
     const totalQuestions = roomData.questions.length;
-    const percentage = ((score / totalQuestions) * 100).toFixed(2);
+    const percentage = ((userScore / totalQuestions) * 100).toFixed(2);
     return (
       <div className="quizroom-container">
         <h2>Quiz Completed!</h2>
         <div className="analysis">
           <h3>Analysis</h3>
           <p>Total Questions: {totalQuestions}</p>
-          <p>Correct Answers: {score}</p>
+          <p>Correct Answers: {userScore}</p>
           <p>Percentage: {percentage}%</p>
-          <p>Score: {score}/{totalQuestions}</p>
+          <p>Score: {userScore}/{totalQuestions}</p>
         </div>
         <button onClick={() => navigate('/leaderboard/' + roomCode)}>View Leaderboard</button>
         <button onClick={() => navigate('/room')}>Back to Rooms</button>
@@ -189,19 +198,26 @@ const QuizRoom = () => {
       <p>Time Remaining: {timer} seconds</p>
       <p>{currentQuestion.question}</p>
       <div>
-        {currentQuestion.options.map((option, idx) => (
-          <button
-            key={idx}
-            onClick={() => handleAnswerSelect(idx)}
-            style={{
-              backgroundColor: selectedAnswer === idx ? '#4ade80' : '',
-              margin: '5px',
-              padding: '10px',
-            }}
-          >
-            {option}
-          </button>
-        ))}
+        {currentQuestion.options.map((option, idx) => {
+          let buttonClass = 'btn bg-gray-200 hover:bg-gray-300 m-2 p-4 rounded';
+          if (answerSubmitted) {
+            if (idx === selectedAnswer) {
+              buttonClass = isCorrectAnswer ? 'btn bg-green-500 text-white m-2 p-4 rounded' : 'btn bg-red-500 text-white m-2 p-4 rounded';
+            } else if (idx === currentQuestion.correctAnswer) {
+              buttonClass = 'btn bg-green-500 text-white m-2 p-4 rounded';
+            }
+          }
+          return (
+            <button
+              key={idx}
+              onClick={() => handleAnswerSelect(idx)}
+              className={buttonClass}
+              disabled={answerSubmitted}
+            >
+              {option}
+            </button>
+          );
+        })}
       </div>
       <button onClick={handleNext} disabled={selectedAnswer === null}>Next</button>
     </div>
