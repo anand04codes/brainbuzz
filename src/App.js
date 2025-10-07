@@ -14,6 +14,7 @@ import Leaderboard from './pages/Leaderboard';
 
 import Signup from './Signup';
 import Login from './Login';
+import FloatingChatbot from './components/FloatingChatbot';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
+      <FloatingChatbot />
     </Router>
   );
 };

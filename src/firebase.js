@@ -1,9 +1,9 @@
-// src/firebase.js
 
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore, doc } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore, connectFirestoreEmulator, doc } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 // ✅ Firebase config from environment
 const firebaseConfig = {
@@ -50,6 +50,22 @@ console.log('Firebase: Services initialized', {
   db: !!db,
   storage: !!storage
 });
+
+// ✅ Connect to Firestore Emulator in development
+// To use Firebase Emulator locally:
+// 1. Install Firebase CLI: npm install -g firebase-tools
+// 2. Start Firestore emulator: npm run firestore:emulator (or firebase emulators:start --only firestore)
+// 3. Set NODE_ENV=development (default in React dev mode)
+// 4. Emulator runs on localhost:8080 by default
+// 5. Data is stored locally and doesn't affect production Firestore
+if (process.env.NODE_ENV === 'development') {
+  try {
+    connectFirestoreEmulator(db, 'localhost', 8080);
+    console.log('Firebase: Connected to Firestore Emulator');
+  } catch (error) {
+    console.warn('Firebase: Firestore Emulator connection failed (might already be connected):', error.message);
+  }
+}
 
 // Debug authentication state changes
 auth.onAuthStateChanged((user) => {
